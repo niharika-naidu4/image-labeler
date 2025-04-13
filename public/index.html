@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Label Detection</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Select an Image to Upload</h2>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
