@@ -1,13 +1,13 @@
-runtime: nodejs18
+runtime: nodejs20
 
 handlers:
+  - url: /(.*\.(js|css|png|jpg|jpeg|gif|ico|html|svg|eot|ttf|woff|woff2))
+    static_files: public/\1
+    upload: public/.*
+
   - url: /
     static_files: public/index.html
     upload: public/index.html
-
-  - url: /(.*)
-    static_files: public/\1
-    upload: public/(.*)
 
   - url: /.*
     script: auto

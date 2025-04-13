@@ -6,7 +6,7 @@ const { ImageAnnotatorClient } = require('@google-cloud/vision');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: '/tmp' });
 
 const client = new ImageAnnotatorClient();
 app.use(express.static(path.join(__dirname, 'public')));
